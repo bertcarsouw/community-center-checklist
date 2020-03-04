@@ -1,0 +1,150 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #545454;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.room {
+	position: relative;
+	border-bottom: 1px solid #dadada;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #ffecca;
+}
+
+.room__title {
+	font-size: 1.5rem;
+	padding-left: 20px;
+	color: #966100;
+}
+
+.room--completed {
+	background: #ffdfa6;
+}
+
+.room--completed::after {
+	position: absolute;
+	content: url(assets/miscellaneous/check.svg);
+	width: 40px;
+	height: 40px;
+	right: 10px;
+	bottom: 10px;
+}
+
+.room img {
+	height: 65%;
+	margin-right: 20px;
+}
+
+.room__last {
+	border-bottom: 1px solid #fff;
+}
+
+.bundle {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #dadada;
+	display: flex;
+	align-items: center;
+	background: #fff4e0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bundle--completed::after {
+	position: absolute;
+	right: 20px;
+	content: url(assets/miscellaneous/check.svg);
+	width: 30px;
+	height: 30px;
+}
+
+.bundle--completed .progress {
+	display: none;
+}
+
+.bundle__title {
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	padding-left: 20px;
+}
+
+.bundle img {
+	margin-left: 10px;
+}
+
+.bundle .progress {
+	margin-right: 20px;
+}
+
+.item {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #dadada;
+}
+
+.item__last {
+	border-bottom: 1px solid #fff;
+}
+
+.item__title {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	font-size: .8rem;
+	margin-left: 20px;
+	opacity: .6;
+}
+
+.item img {
+	height: 80%;
+	margin-right: 20px;
+	opacity: .4;
+}
+
+.item--completed {
+	background: #f6fff6;
+	color: #ebffeb;
+}
+
+.item--completed .item__title {
+	opacity: 1;
+	color: #008e00;
+}
+
+.item--completed img {
+	opacity: 1;
+}
+
+.item--completed::after {
+	position: absolute;
+	right: 0;
+	content: url(assets/miscellaneous/check.svg);
+	height: 80%;
+}
+
+.item--quality::after {
+	position: absolute;
+	content: url(assets/miscellaneous/gold-quality.png);
+	height: 20px;
+	bottom: 25%;
+	right: 5px;
+}
+
+.expandable {
+	transition: max-height .2s ease-out;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+}
